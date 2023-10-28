@@ -21,7 +21,9 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand text-success" href="#">Pet4U</a>
+          <a class="navbar-brand text-success" href="pagina_principal.html"
+            >Pet4U</a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -39,7 +41,7 @@
                 <a
                   class="nav-link active text-capitalize"
                   aria-current="page"
-                  href="#"
+                  href="pagina_principal.html"
                   >Página Principal</a
                 >
               </li>
@@ -48,6 +50,11 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link text-capitalize" href="#">Loja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-capitalize" aria-current="page" href="#"
+                  >Animais para adoção</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link text-capitalize" href="#"
@@ -65,17 +72,24 @@
       </nav>
     </header>
 
-    <div id="message">
+    <div
+      id="message"
+      class="d-flex w-100 h-remaining align-items-center justify-content-center flex-column"
+    >
       <div>
         Não olhe para trás, <u><i>adote</i></u> e dê uma vida digna de se viver
         ao seu novo melhor amigo
       </div>
-      <div>
+      <div class="mt-4">
         <button class="btn btn-success" id="adopt-button" type="submit">
           Ver lista
         </button>
       </div>
     </div>
+
+    <footer class="p-">
+      Copyright &#169; by Diogo Gouveia, Rafael Coelho e Rafael Reis.
+    </footer>
 
     <script
       src="styles/js/popper.min.js"

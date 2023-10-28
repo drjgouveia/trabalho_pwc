@@ -31,3 +31,18 @@ div#navbarNav {
   font-size: 14px !important;
   font-weight: bold !important;
 }
+
+body {
+  padding-top: 70px;
+}
+
+.h-remaining {
+  height: calc(
+    100vh - 70px - (24px + 2rem)
+  ); /* 70px corresponde à altura da navbar e 24px + 2rem é a altura c/ o padding do footer */
+}
+
+footer {
+  text-align: center;
+  opacity: 50%;
+}
