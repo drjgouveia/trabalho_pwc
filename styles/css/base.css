@@ -46,3 +46,34 @@ footer {
   text-align: center;
   opacity: 50%;
 }
+
+.título {
+  text-align: center;
+  margin-top: 82px;
+  margin-bottom: 40px;
+}
+
+.título h1 {
+  font-size: 64px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+}
+
+.texto {
+  text-align: center;
+  margin: 0 191px;
+}
+
+.texto p {
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 26px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.52px;
+}
+
