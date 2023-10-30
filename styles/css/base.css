@@ -4,11 +4,16 @@ header nav ul li {
   padding: 0;
   list-style: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
 }
 
 header nav ul li a {
   text-decoration: none;
+}
+
+header {
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 div#navbarNav {
