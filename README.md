@@ -1,0 +1,2 @@
+API Key: VCyR2g0ZwUlLuzrj5Jb5LE1EN8RGCF2nfHDncOtFUa2Y6dpdaD
+Secret: NedKoPPpa1saKJjZiS7xHM6W7AZ3jNJolusLyzTz
