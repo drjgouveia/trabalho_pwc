@@ -6,6 +6,7 @@ window.onload = function () {
     .then((response) => response.text())
     .then((data) => {
       headerContainer.innerHTML = data;
+      definirActiveClassHeader();
     });
   fetch("components/footer.html")
     .then((response) => response.text())
