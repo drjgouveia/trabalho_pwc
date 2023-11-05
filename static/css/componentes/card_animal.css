@@ -28,7 +28,7 @@
 }
 
 .btn-adicionar-favorito:hover {
-  background: #198754 !important;
+  background: var(--bs-success) !important;
   color: white !important;
   transition: 0.5s !important;
 }
