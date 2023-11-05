@@ -1,0 +1,82 @@
+.card-loja {
+  width: 90% !important;
+  border-radius: 24px !important;
+  background-color: #fafaf5 !important;
+  border: 2px solid #e6e6e6;
+}
+
+.card-loja > img {
+  border-radius: 24px !important;
+  height: 300px;
+  object-fit: contain;
+  background-color: white;
+}
+
+.btn-comprar,
+.btn-adicionar,
+.btn-remover,
+.contador,
+.btn-remover-carrinho {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 32px !important;
+  width: 100% !important;
+  color: #6d6d6d;
+  font-weight: 600;
+}
+
+.btn-comprar {
+  background: #e6e6e6 !important;
+  transition: 0.5s !important;
+}
+
+.btn-comprar:hover {
+  background: var(--bs-success) !important;
+  color: white !important;
+  transition: 0.5s !important;
+}
+
+.contador {
+  background: #e6e6e6 !important;
+  transition: 0.5s !important;
+}
+
+.btn-adicionar {
+  background: #e6e6e6 !important;
+  transition: 0.5s !important;
+}
+
+.btn-adicionar:hover {
+  background: var(--bs-success) !important;
+  color: white !important;
+  transition: 0.5s !important;
+}
+
+.btn-remover {
+  background: #e6e6e6 !important;
+  transition: 0.5s !important;
+}
+
+.btn-remover:hover {
+  background: var(--bs-danger) !important;
+  color: white !important;
+  transition: 0.5s !important;
+}
+
+.btn-remover:disabled {
+  background: #f0f0f0 !important;
+  color: #6d6d6d !important;
+  transition: 0.5s !important;
+}
+
+.btn-remover-carrinho {
+  background: var(--bs-danger) !important;
+  color: white !important;
+  transition: 0.5s !important;
+}
+
+.card-actions {
+  display: flex !important;
+  align-items: center !important;
+}

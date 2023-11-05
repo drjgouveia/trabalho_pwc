@@ -59,7 +59,7 @@ function inserirAnimais() {
 
   if (animais_para_inserir.length === 0) {
     lista.innerHTML = `
-    <div class="col-12">
+    <div class="col-12 text-center">
       <p class="text-center">Nenhum animal nos favoritos</p>
     </div>
     `;
