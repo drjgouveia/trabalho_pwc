@@ -67,7 +67,7 @@ function onClickFavorito(e) {
 }
 
 function onClickListaFavoritos(e) {
-  window.location.reload();
+  e.target.parentElement.parentElement.parentElement.remove();
 }
 
 function addListenerCards() {

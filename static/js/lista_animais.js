@@ -1,7 +1,6 @@
 var is_loading = false;
 
 function inserirAnimal(animal) {
-  // Assuming "elemento" is the ID of the div you want to append to
   const colDiv = document.createElement("div");
   colDiv.className =
     "col-lg-4 col-sm-12 col-12 d-flex justify-content-center align-items-center p-3";
@@ -79,7 +78,7 @@ function inserirAnimais() {
     if (i % 3 === 0) {
       var rowDiv = document.createElement("div");
       rowDiv.className = "row";
-      elemento.appendChild(rowDiv);
+      lista.appendChild(rowDiv);
     }
     let card = inserirAnimal(animais_para_inserir[i]);
     rowDiv.appendChild(card);
