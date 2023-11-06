@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base</title>
+    <title>Sobre nós</title>
 
     <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -29,35 +29,49 @@
   </head>
   <body>
     <div id="header"></div>
-    <div id="Titulo">
-      <h1>Sobre nós</h1>
-    </div>
-    <div id="messagem_sobre_nos">
-      <p>Conectamos corações peludos a lares amorosos. Descubra companheiros leais para adoção. Transforme vidas, adote um amigo canino hoje! 🐾</p>
+
+    <div class="container">
+      <h1 class="text-center pt-4">Sobre nós</h1>
+      <h6 class="text-center pt-3 pb-5">Conectamos corações peludos a lares amorosos. Descubra companheiros
+        leais para adoção. Transforme vidas, adote um amigo canino hoje! 🐾</h6>
     </div>
 
-    <div class="card-group">
-      <div class="card">
-        <img src="assets/pessoa_1.png" class="card-img-top" alt="pessoa 1">
-        <div class="card-body">
-          <h5 class="card-title">Diogo Gouveia</h5>
-          <p class="card-text">Cuidador</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/pessoa_2.png" class="card-img-top" alt="Pessoa 2">
-        <div class="card-body">
-          <h5 class="card-title">Rafael Coelho</h5>
-          <p class="card-text">Gestor de adoções</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="assets/pessoa_3.png" class="card-img-top" alt="Pessoa 3">
-        <div class="card-body">
-          <h5 class="card-title">Rafael Reis</h5>
-          <p class="card-text">Voluntário</p>
-        </div>
-      </div>
+    <div class="row row-cols-1 row-cols-md-3 g-3 p-5">
+          <div class="col">
+            <div class="card">
+              <img src="assets/pessoa_1.png"
+                   class="card-img-top"
+                   alt="Pessoa 1">
+
+              <div class="card-body">
+                <h5 class="card-title text-center">Diogo Gouveia</h5>
+                <p class="card-text text-center">Cuidador</p>
+              </div>
+            </div>
+          </div>
+
+            <div class="col">
+              <div class="card">
+                <img src="assets/pessoa_2.png"
+                     class="card-img-top"
+                     alt="Pessoa 2">
+
+                <div class="card-body">
+                  <h5 class="card-title text-center">Rafael Coelho</h5>
+                  <p class="card-text text-center">Gestor de adoções</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="assets/pessoa_3.png" class="card-img-top" alt="Pessoa 3">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Rafael Reis</h5>
+                  <p class="card-text text-center">Voluntário</p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 
     <div id="footer"></div>
