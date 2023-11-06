@@ -6,3 +6,8 @@
 #formulario p {
     font-weight: bold;
 }
+
+.required:after {
+    content:" *";
+    color: red;
+}

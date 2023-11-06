@@ -20,49 +20,48 @@
         <form>
           <div class="m-5 p-5 mt-6" id="formulario">
             <div class="mb-3">
-              <label for="nome" class="form-label fw-bold">Nome Completo</label>
-              <input type="text" class="form-control" id="nome_completo" />
+              <label for="nome" class="form-label fw-bold required">Nome Completo</label>
+              <input type="text" class="form-control" id="nome_completo"/>
             </div>
             <div class="mb-3">
-              <label for="contacto_telefonico" class="form-label fw-bold"
+              <label for="contacto_telefonico" class="form-label fw-bold required"
                 >Contacto Telefónico</label
               >
               <input
                 type="text"
                 class="form-control"
                 id="contacto_telefonico"
+                
               />
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label fw-bold">E-mail</label>
-              <input type="email" class="form-control" id="email" required />
+              <label for="email" class="form-label fw-bold required">E-mail</label>
+              <input type="email" class="form-control" id="email"/>
             </div>
             <div class="mb-3">
-              <label for="idade" class="form-label fw-bold">Idade</label>
-              <input type="number" class="form-control" id="idade" />
+              <label for="idade" class="form-label fw-bold required">Idade</label>
+              <input type="number" class="form-control" id="idade"/>
             </div>
             <div class="mb-3">
-              <label for="morada" class="form-label fw-bold">Morada</label>
+              <label for="morada" class="form-label fw-bold required">Morada</label>
               <textarea class="form-control" id="morada" rows="3"></textarea>
             </div>
             <div class="mb-3">
-              <label for="cidade" class="form-label fw-bold">Cidade</label>
+              <label for="cidade" class="form-label fw-bold required">Cidade</label>
               <input type="text" class="form-control" id="cidade" />
             </div>
             <div class="mb-3">
-              <label for="profissao" class="form-label fw-bold"
-                >Profissão</label
-              >
+              <label for="profissao" class="form-label fw-bold required"
+                >Profissão</label>
               <input type="text" class="form-control" id="profissao" />
             </div>
             <div class="mb-3">
               <label for="nome animal" class="form-label fw-bold"
                 >Se gostaria de adoptar um animal específico, indique por favor
-                o nome do animal.</label
-              >
+                o nome do animal.</label>
               <input type="text" class="form-control" id="nome_animal" />
             </div>
-            <p>
+            <p class="required">
               Caso não procure adoptar um animal específico, indique se tem
               preferência pelo sexo do animal.
             </p>
@@ -98,7 +97,7 @@
                 Indiferente
               </label>
             </div>
-            <p>Qual o objetivo da adopção?</p>
+            <p class="required">Qual o objetivo da adopção?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -133,7 +132,7 @@
               />
               <label class="form-check-label" for="criacao"> Criação </label>
             </div>
-            <p>Tipo de habitação.</p>
+            <p class="required">Tipo de habitação </p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -186,7 +185,7 @@
                 Não
               </label>
             </div>
-            <p>A habitação é</p>
+            <p class="required">A habitação é</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -210,12 +209,12 @@
               </label>
             </div>
             <div class="mb-3">
-              <label for="adultos" class="form-label fw-bold"
+              <label for="adultos" class="form-label fw-bold required"
                 >Quantos adultos vivem na casa?</label
               >
               <input type="number" class="form-control" id="adultos" />
             </div>
-            <p>
+            <p class="required">
               Vivem crianças na casa? Se sim, indique o intervalo de idades.
             </p>
             <div class="form-check mb-3">
@@ -266,7 +265,7 @@
                 Mais de 10 anos
               </label>
             </div>
-            <p>A casa é visitada frequentemente por crianças?</p>
+            <p class="required">A casa é visitada frequentemente por crianças?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -288,14 +287,14 @@
               <label class="form-check-label" for="nao_visitas"> Não </label>
             </div>
             <div class="mb-3">
-              <label for="horas_sozinho" class="form-label fw-bold"
+              <label for="horas_sozinho" class="form-label fw-bold required"
                 >Quantas horas por dia, em média, passará o animal, sozinho em
                 casa?</label
               >
               <input type="text" class="form-control" id="horas_sozinho" />
             </div>
             <div class="mb-3">
-              <label for="outros_animais" class="form-label fw-bold"fw-bold"fw-bold"fw-bold"fw-bold"fw-bold"fw-bold"
+              <label for="outros_animais" class="form-label fw-bold required"
                 >Tem outros animais em casa e/ou a seu cargo? Se sim,
                 especifique por favor o tipo e a idade.</label
               >
@@ -305,7 +304,7 @@
               Que tipo de personalidade espera encontrar no animal? Preencha por
               favor as próximas questões:
             </p>
-            <p>Goste de crianças:</p>
+            <p class="required">Goste de crianças:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -348,7 +347,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Sociável com outros animais:</p>
+            <p class="required">Sociável com outros animais:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -385,7 +384,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Não se importe com estranhos:</p>
+            <p class="required">Não se importe com estranhos:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -422,7 +421,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Esteja esterilizado/castrado:</p>
+            <p class="required">Esteja esterilizado/castrado:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -468,7 +467,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Goste de ser pegado ao colo:</p>
+            <p class="required">Goste de ser pegado ao colo:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -505,7 +504,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Que seja calmo:</p>
+            <p class="required">Que seja calmo:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -542,7 +541,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Que se comporte bem quando fica sozinho:</p>
+            <p class="required">Que se comporte bem quando fica sozinho:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -588,7 +587,7 @@
                 Pouco importante
               </label>
             </div>
-            <p>Atividade do animal:</p>
+            <p class="required">Atividade do animal:</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -636,7 +635,7 @@
                 Indiferente
               </label>
             </div>
-            <p>Será o seu primeiro animal?</p>
+            <p class="required">Será o seu primeiro animal?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -662,12 +661,12 @@
               </label>
             </div>
             <div class="mb-3">
-              <label for="experiencia" class="form-label fw-bold"fw-bold"
+              <label for="experiencia" class="form-label fw-bold"
                 >Se não, conte-nos a sua experiência por favor.</label
               >
               <input type="text" class="form-control" id="experiencia" />
             </div>
-            <p>Na sua ausência (férias p.ex.) como pretende deixar o animal?</p>
+            <p class="required">Na sua ausência (férias p.ex.) como pretende deixar o animal?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -704,7 +703,7 @@
                 Irá comigo de férias.
               </label>
             </div>
-            <p>O animal ficará preso em alguma situação?</p>
+            <p class="required">O animal ficará preso em alguma situação?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -732,7 +731,7 @@
               >
               <input type="text" class="form-control" id="veterinario" />
             </div>
-            <p>No caso de acidente, irá recorrer a um veterinário?</p>
+            <p class="required">No caso de acidente, irá recorrer a um veterinário?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -754,12 +753,12 @@
               <label class="form-check-label" for="nao_acidente"> Não </label>
             </div>
             <div class="mb-3">
-              <label for="custo" class="form-label fw-bold"
+              <label for="custo" class="form-label fw-bold required"
                 >Se a conta for elevada, o que fará?
               </label>
               <input type="text" class="form-control" id="custo" />
             </div>
-            <p>Que tipo de alimentação pretende dar ao animal?</p>
+            <p class="required">Que tipo de alimentação pretende dar ao animal?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -808,7 +807,7 @@
                 Restos de Refeições
               </label>
             </div>
-            <p>O que está nos seus planos para os próximos 10/15 anos?</p>
+            <p class="required">O que está nos seus planos para os próximos 10/15 anos?</p>
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
@@ -854,25 +853,25 @@
               </label>
             </div>
             <div class="mb-3">
-              <label for="agregado" class="form-label fw-bold"
+              <label for="agregado" class="form-label fw-bold required"
                 >Algum dos elementos do seu agregado familiar, ou
                 amigos/parentes próximos, tem alergia a cães ou gatos?</label
               >
               <input type="text" class="form-control" id="agregado" />
             </div>
             <div class="mb-3">
-              <label for="teste" class="form-label fw-bold"
+              <label for="teste" class="form-label fw-bold required"
                 >Em caso de gravidez, fará o teste da toxoplasmose?</label
               >
               <input type="text" class="form-control" id="teste" />
             </div>
             <div class="mb-3">
-              <label for="teste_positivo" class="form-label fw-bold"
+              <label for="teste_positivo" class="form-label fw-bold required"
                 >Se for positivo, o que fará?
               </label>
               <input type="text" class="form-control" id="teste_positivo" />
             </div>
-            <p>
+            <p class="required">
               Gostaria de continuar a ter o nosso apoio/conselhos, depois de
               adoptar o animal?
             </p>
@@ -911,12 +910,12 @@
               />
             </div>
             <div class="mb-3">
-              <label for="documentos" class="form-label fw-bold"fw-bold"
+              <label for="documentos" class="form-label fw-bold"
                 >Anexar documentos:</label
               >
               <input class="form-control" type="file" id="documentos" />
             </div>
-            <p>
+            <p class="required">
               Vamos manter os seus dados em segurança, enquanto assim o
               pretender, pode eliminar ou editar. Consulte a nossa Política de
               Privacidade.
@@ -933,7 +932,7 @@
                 Li e concordo com a Política de Privacidade.
               </label>
             </div>
-            <p>Campos de preenchimento obrigatório</p>
+            <p class="required">Campos de preenchimento obrigatório</p>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </form>
