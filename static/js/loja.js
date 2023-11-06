@@ -107,7 +107,9 @@ function insertProduct(product) {
                     </button>
                 </div>
                 <div class="col-2">
-                    <button class="btn w-100 btn-light btn-remover" disabled>
+                    <button class="btn w-100 btn-light btn-remover" ${
+                      obj.quantidade > 1 ? "" : "disabled"
+                    }>
                         <i class="fa-solid fa-minus"></i>
                     </button>
                 </div>

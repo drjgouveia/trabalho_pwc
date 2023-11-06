@@ -22,16 +22,20 @@ function onClickAdicionarContador(e) {
         .filter((obj) => {
           return (
             obj.id !==
-            e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
-              ".card-actions"
-            ).dataset.id
+            parseInt(
+              e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+                ".card-actions"
+              ).dataset.id
+            )
           );
         })
         .concat([
           {
-            id: e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
-              ".card-actions"
-            ).dataset.id,
+            id: parseInt(
+              e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+                ".card-actions"
+              ).dataset.id
+            ),
             quantidade: parseInt(
               e.target.parentElement.parentElement.parentElement.querySelector(
                 ".contador"
@@ -72,16 +76,20 @@ function onClickRemoverContador(e) {
         .filter((obj) => {
           return (
             obj.id !==
-            e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
-              ".card-actions"
-            ).dataset.id
+            parseInt(
+              e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+                ".card-actions"
+              ).dataset.id
+            )
           );
         })
         .concat([
           {
-            id: e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
-              ".card-actions"
-            ).dataset.id,
+            id: parseInt(
+              e.target.parentElement.parentElement.parentElement.parentElement.querySelector(
+                ".card-actions"
+              ).dataset.id
+            ),
             quantidade: parseInt(
               e.target.parentElement.parentElement.parentElement.querySelector(
                 ".contador"
@@ -98,7 +106,8 @@ function onClickContador(e) {
     "carrinho",
     JSON.stringify(
       JSON.parse(localStorage.getItem("carrinho") ?? "[]").filter(
-        (item) => item.id !== e.target.parentElement.parentElement.dataset.id
+        (item) =>
+          item.id !== parseInt(e.target.parentElement.parentElement.dataset.id)
       )
     )
   );
@@ -131,7 +140,7 @@ function onClickAdicionar(e) {
     JSON.stringify(
       JSON.parse(localStorage.getItem("carrinho") ?? "[]").concat([
         {
-          id: e.target.parentElement.parentElement.dataset.id,
+          id: parseInt(e.target.parentElement.parentElement.dataset.id),
           quantidade: 1,
         },
       ])
