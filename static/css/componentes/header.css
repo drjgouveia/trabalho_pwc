@@ -1,0 +1,21 @@
+header nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.navbar-brand {
+  font-size: 32px !important;
+}
