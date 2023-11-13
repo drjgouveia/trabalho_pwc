@@ -98,7 +98,7 @@ function fetchAnimais() {
           let lista = document.getElementById("lista");
           lista.innerHTML = `
             <div class="col-12">
-              <h1 class="text-center">Não foi possível procurar nenhum animal</h1>
+              <h6 class="text-center">Não foi possível procurar nenhum animal</h6>
             </div>
           `;
         })

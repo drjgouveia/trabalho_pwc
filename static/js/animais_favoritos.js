@@ -1,3 +1,7 @@
+/** 
+* Função responsável por fazer o loading dos dados de cada animal para mostrar.
+* @return {Promise} Retorna uma promessa que se resolve quando todos os dados estiverem carregados.
+*/
 function loadDados() {
   return new Promise((resolve, reject) => {
     let spinner = document.getElementById("lista-loading");
@@ -9,9 +13,12 @@ function loadDados() {
     });
   });
 }
-
+/** 
+* Função responsável por gerar o card do animal inserido.
+* @param {Object} animal - Objeto com os dados do animal.
+* @return {Element} Retorna o elemento card dentro de uma coluna.
+*/
 function inserirAnimal(animal) {
-  // Assuming "elemento" is the ID of the div you want to append to
   const colDiv = document.createElement("div");
   colDiv.className =
     "col-lg-4 col-sm-12 col-12 d-flex justify-content-center align-items-center p-3";
@@ -54,12 +61,16 @@ function inserirAnimal(animal) {
   return colDiv;
 }
 
+/** 
+* Função responsável por inserir os vários animais na lista.
+* @return Não retorna nada.
+*/
 function inserirAnimais() {
   let lista = document.getElementById("lista");
 
   if (animais_para_inserir.length === 0) {
     lista.innerHTML = `
-    <div class="col-12">
+    <div class="col-12 text-center">
       <p class="text-center">Nenhum animal nos favoritos</p>
     </div>
     `;
@@ -75,12 +86,10 @@ function inserirAnimais() {
     lista.innerHTML = "";
   }
 
+  var rowDiv = document.createElement("div");
+  rowDiv.className = "row row-cols-1 row-cols-md-2 g-4";
+  lista.appendChild(rowDiv);
   for (let i = 0; i < animais_para_inserir.length; i++) {
-    if (i % 3 === 0) {
-      var rowDiv = document.createElement("div");
-      rowDiv.className = "row";
-      elemento.appendChild(rowDiv);
-    }
     let card = inserirAnimal(animais_para_inserir[i]);
     rowDiv.appendChild(card);
   }
