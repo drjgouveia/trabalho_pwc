@@ -1,7 +1,11 @@
 var is_loading = false;
 
+/**
+ * Função responsável por criar o card do animal e o coloca dentro de uma col.
+ * @param {Object} animal - Objeto com os dados do animal.
+ * @return {Element} Retorna o elemento.
+ */
 function inserirAnimal(animal) {
-  // Assuming "elemento" is the ID of the div you want to append to
   const colDiv = document.createElement("div");
   colDiv.className =
     "col-lg-4 col-sm-12 col-12 d-flex justify-content-center align-items-center p-3";
@@ -49,6 +53,10 @@ function inserirAnimal(animal) {
   return colDiv;
 }
 
+/**
+ * Função responsável por adicionar os animais à lista.
+ * @return Não retorna nada.
+ */
 function inserirAnimais() {
   let lista = document.getElementById("lista");
 
@@ -79,7 +87,7 @@ function inserirAnimais() {
     if (i % 3 === 0) {
       var rowDiv = document.createElement("div");
       rowDiv.className = "row";
-      elemento.appendChild(rowDiv);
+      lista.appendChild(rowDiv);
     }
     let card = inserirAnimal(animais_para_inserir[i]);
     rowDiv.appendChild(card);
@@ -88,6 +96,10 @@ function inserirAnimais() {
   addListenerCards();
 }
 
+/**
+ * Função responsável por lidar com o scroll infinito.
+ * @return Não retorna nada.
+ */
 const handleScrollInfinito = () => {
   const endOfPage =
     window.innerHeight + window.scrollY >= document.body.offsetHeight;

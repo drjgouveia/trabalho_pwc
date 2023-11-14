@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componente - Card Loja</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/base.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/componentes/card_loja.css"
+    />
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid" id="lista">
+      <div class="row">
+        <div
+          class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-center p-3"
+        >
+          <div class="card card-loja">
+            <img
+              src="https://static.zoomalia.com/prod_img/39817/la_8214558dbb6f6f8bb2e16d03b85bde76e2c1671702885.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="card-loja-link" data-href="https://example.com">
+                <h5 class="card-title">
+                  Nome de produto
+                </h5>
+                <h6 class="card-subtitle text-success">
+                  Preço €
+                </h6>
+              </div>
+              <div class="card-actions row" data-id="1">
+                <div class="col">
+                  <button class="btn w-100 btn-light mt-2 btn-comprar">
+                    Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-center p-3"
+        >
+          <div class="card card-loja">
+            <img
+              src="https://static.zoomalia.com/prod_img/39817/la_8214558dbb6f6f8bb2e16d03b85bde76e2c1671702885.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="card-loja-link" data-href="https://example.com">
+                <h5 class="card-title">
+                  Nome de produto
+                </h5>
+                <h6 class="card-subtitle text-success">
+                  Preço €
+                </h6>
+              </div>
+              <div class="card-actions row" data-id="2">
+                <div class="col-8">
+                  <div class="btn w-100 btn-light mt-2 contador">
+                    3
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn w-100 btn-light mt-2 btn-adicionar">
+                    +
+                  </button>
+                </div>
+                <div class="col-2">
+                  <button class="btn w-100 btn-light mt-2 btn-remover">
+                    -
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-center p-3"
+        >
+          <div class="card card-loja">
+            <img
+              src="https://static.zoomalia.com/prod_img/39817/la_8214558dbb6f6f8bb2e16d03b85bde76e2c1671702885.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="card-loja-link" data-href="https://example.com">
+                <h5 class="card-title">
+                  Nome de produto
+                </h5>
+                <h6 class="card-subtitle text-success">
+                  Preço €
+                </h6>
+              </div>
+              <div class="card-actions row" data-id="3">
+                <div class="col-8">
+                  <div class="btn w-100 btn-light mt-2 contador">
+                    1
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button class="btn w-100 btn-light mt-2 btn-adicionar">
+                    +
+                  </button>
+                </div>
+                <div class="col-2">
+                  <button class="btn w-100 btn-light mt-2 btn-remover" disabled>
+                    -
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../static/js/components/card_loja.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

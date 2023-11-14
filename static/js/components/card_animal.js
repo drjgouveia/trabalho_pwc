@@ -38,6 +38,12 @@ function onMouseoverFavorito(e) {
   e.target.classList.remove("btn-favorito");
 }
 
+/**
+ * Handler para o tirar o mouse do botão "Favorito".
+ * @summary Muda o texto do botão para "Favorito" e adiciona a classe "btn-favorito"
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onMouseOutFavorito(e) {
   e.target.innerHTML = "Favorito";
   e.target.classList.remove("btn-remover-favorito");
@@ -45,6 +51,12 @@ function onMouseOutFavorito(e) {
   e.target.addEventListener("mouseover", onMouseoverFavorito, false);
 }
 
+/**
+ * Handler para o click no botão "Favorito".
+ * @summary Muda o texto do botão para "Adicionar aos favoritos" e adiciona a classe "btn-adicionar-favorito", além de remover o id do animal do localStorage.
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickFavorito(e) {
   e.target.innerHTML = "Adicionar aos favoritos";
   e.target.classList.add("btn-adicionar-favorito");
@@ -66,10 +78,19 @@ function onClickFavorito(e) {
   e.target.removeEventListener("mouseout", onMouseOutFavorito, false);
 }
 
+/**
+ * Handler para o click no botão "lista de favoritos".
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickListaFavoritos(e) {
-  window.location.reload();
+  e.target.parentElement.parentElement.parentElement.remove();
 }
 
+/**
+ * Função responsável por adicionar os listeners nos cards.
+ * @return Não retorna nada.
+ */
 function addListenerCards() {
   var button_adicionar_favorito_elementos = document.getElementsByClassName(
     "btn-adicionar-favorito"
