@@ -1,16 +1,22 @@
-window.onload = function () {
-  const headerContainer = document.getElementById("header");
-  const footerContainer = document.getElementById("footer");
+/**
+ * Função para carregar o header e o footer em todas as páginas
+ */
+$(document).ready(function () {
+  const headerContainer = $("#header");
+  const footerContainer = $("#footer");
 
-  fetch("components/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      headerContainer.innerHTML = data;
+  $.ajax({
+    url: "components/header.html",
+    success: function (data) {
+      headerContainer.html(data);
       definirActiveClassHeader();
-    });
-  fetch("components/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      footerContainer.innerHTML = data;
-    });
-};
+    },
+  });
+
+  $.ajax({
+    url: "components/footer.html",
+    success: function (data) {
+      footerContainer.html(data);
+    },
+  });
+});

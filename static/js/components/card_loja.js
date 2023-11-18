@@ -1,3 +1,8 @@
+/**
+ * Handler para o evento de click no botão de adicionar quantidade ao carrinho
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickAdicionarContador(e) {
   let novo_valor =
     parseInt(
@@ -47,6 +52,11 @@ function onClickAdicionarContador(e) {
   );
 }
 
+/**
+ * Handler para o evento de click no botão de remover quantidade do carrinho
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickRemoverContador(e) {
   let novo_valor =
     parseInt(
@@ -101,6 +111,11 @@ function onClickRemoverContador(e) {
   );
 }
 
+/**
+ * Handler para o evento de click no botão de remover do carrinho
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickContador(e) {
   localStorage.setItem(
     "carrinho",
@@ -123,17 +138,32 @@ function onClickContador(e) {
   addListenerEventsLoja();
 }
 
+/**
+ * Handler para o evento de click no botão de adicionar ao carrinho
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onHoverContador(e) {
   e.target.dataset.contador = e.target.innerText;
   e.target.classList.add("btn-remover-carrinho");
   e.target.innerText = "Remover do carrinho";
 }
 
+/**
+ * Handler para on mouse leave do botão do contador
+ * @param {Event} e - evento
+ * @return {null} Não retorna nada
+ */
 function onLeaveContador(e) {
   e.target.innerText = e.target.dataset.contador;
   e.target.classList.remove("btn-remover-carrinho");
 }
 
+/**
+ * Handler para o evento de click no botão de adicionar ao carrinho
+ * @param {Event} e - evento.
+ * @return {null} Não retorna nada
+ */
 function onClickAdicionar(e) {
   localStorage.setItem(
     "carrinho",
@@ -168,19 +198,23 @@ function onClickAdicionar(e) {
   addListenerEventsLoja();
 }
 
+/**
+ * Adiciona os listeners de eventos para a loja
+ * @return {null} Não retorna nada
+ */
 function addListenerEventsLoja() {
-  document.querySelectorAll(".btn-adicionar").forEach((btn) => {
-    btn.addEventListener("click", onClickAdicionarContador);
-  });
-  document.querySelectorAll(".btn-remover").forEach((btn) => {
-    btn.addEventListener("click", onClickRemoverContador);
-  });
-  document.querySelectorAll(".contador").forEach((contador) => {
-    contador.addEventListener("mouseover", onHoverContador);
-    contador.addEventListener("mouseleave", onLeaveContador);
-    contador.addEventListener("click", onClickContador);
-  });
-  document.querySelectorAll(".btn-comprar").forEach((btn) => {
-    btn.addEventListener("click", onClickAdicionar);
-  });
+  $(".btn-adicionar").off();
+  $(".btn-adicionar").on("click", onClickAdicionarContador);
+
+  $(".btn-remover").off();
+  $(".btn-remover").on("click", onClickRemoverContador);
+
+  $(".contador").off();
+  $(".contador")
+    .on("mouseover", onHoverContador)
+    .on("mouseleave", onLeaveContador)
+    .on("click", onClickContador);
+
+  $(".btn-comprar").off();
+  $(".btn-comprar").on("click", onClickAdicionar);
 }
