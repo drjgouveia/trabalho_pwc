@@ -16,6 +16,7 @@ function obterToken(force = false) {
       await $.ajax({
         url: "https://api.petfinder.com/v2/oauth2/token",
         type: "POST",
+        crossDomain: true,
         data: {
           grant_type: "client_credentials",
           client_id: "VCyR2g0ZwUlLuzrj5Jb5LE1EN8RGCF2nfHDncOtFUa2Y6dpdaD",
@@ -52,6 +53,7 @@ async function fetchAnimaisPorID(ids) {
           await $.ajax({
             url: `https://api.petfinder.com/v2/animals/${ids[i]}`,
             type: "GET",
+            crossDomain: true,
             headers: {
               Authorization: "Bearer " + token,
             },
@@ -60,13 +62,16 @@ async function fetchAnimaisPorID(ids) {
                 animais_para_inserir.push(data.animal);
               }
             },
-            error: function (error) {
-              if (error.status === 401) {
+
+            statusCode: {
+              401: function () {
                 obterToken(true).then(() => {
-                  fetchAnimaisPorID(ids);
-                  resolve();
+                  fetchAnimaisPorID(ids).then(() => {
+                    resolve();
+                  });
                 });
-              } else if (error.status === 404) {
+              },
+              404: function () {
                 localStorage.setItem(
                   "favoritos",
                   JSON.stringify(
@@ -75,7 +80,7 @@ async function fetchAnimaisPorID(ids) {
                     ).filter((id) => id !== ids[i] && id !== null)
                   )
                 );
-              }
+              },
             },
           });
         } else {
@@ -111,13 +116,17 @@ function fetchAnimais() {
         headers: {
           Authorization: "Bearer " + token,
         },
-        error: function (request, status, error) {
-          if (status === 401) {
+        crossDomain: true,
+        statusCode: {
+          401: function () {
             obterToken(true).then(() => {
-              fetchAnimais();
-              resolve();
+              fetchAnimais().then(() => {
+                resolve();
+              });
             });
-          }
+          },
+        },
+        error: function (error) {
           let lista = document.getElementById("lista");
           lista.innerHTML = `
             <div class="col-12">
@@ -126,19 +135,12 @@ function fetchAnimais() {
           `;
         },
         success: function (data) {
-          if (data.status === 401) {
-            obterToken(true).then(() => {
-              fetchAnimais();
-              resolve();
-            });
-          } else {
-            next_link = data.pagination._links.next.href;
-            current_page = data.pagination.current_page;
-            total = data.pagination.total_count;
-            animais_para_inserir.push(...data.animals);
-            $(spinner).addClass("d-none");
-            resolve();
-          }
+          next_link = data.pagination._links.next.href;
+          current_page = data.pagination.current_page;
+          total = data.pagination.total_count;
+          animais_para_inserir.push(...data.animals);
+          $(spinner).addClass("d-none");
+          resolve();
         },
       });
     });
