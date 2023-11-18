@@ -1,3 +1,4 @@
+// Exemplo de dados da loja
 const data = [
   {
     id: 1,
@@ -62,6 +63,11 @@ const data = [
   },
 ];
 
+/**
+ * Função responsável por adicionar/criar o card do produto 
+ * @param {{}} product 
+ * @returns {HTMLDivElement} - devolve a div com o card do produto
+ */
 function insertProduct(product) {
   let obj =
     JSON.parse(localStorage.getItem("carrinho") ?? "[]").filter((obj) => {
@@ -150,6 +156,10 @@ function insertProduct(product) {
   return colDiv;
 }
 
+/**
+ * Função responsável por adicionar os produtos à página
+ * @returns Não devolve nada
+ */
 function inserirProdutos() {
   document.getElementById("lista-loading").classList.remove("d-none");
   let lista = document.getElementById("lista");

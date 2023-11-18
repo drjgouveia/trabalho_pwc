@@ -60,10 +60,10 @@ function inserirAnimal(animal) {
 function inserirAnimais() {
   let lista = document.getElementById("lista");
 
-  if (animais_para_inserir.length === 0 && lista.children.length === 1) {
+  if (animais_para_inserir.length === 0) {
     lista.innerHTML = `
     <div class="col-12">
-      <h1 class="text-center">Nenhum animal encontrado</h1>
+      <p class="text-center">Nenhum animal encontrado</p>
     </div>
     `;
     return;
