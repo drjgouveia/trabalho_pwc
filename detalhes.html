@@ -31,13 +31,13 @@
       <div class="row" id="elemento">
         <div class="col-12">
           <h1 class="mt-5">
-            Nome <i class="fa" id="sexo"></i>
+            <span id="nome"></span> <i class="fa" id="sexo"></i>
           </h1>
           <hr />
         </div>
       </div>
-      <div class="row d-block">
-        <div class="col-lg-6 col-sm-12 col-12">
+      <div class="row d-flex">
+        <div class="col-lg-6 col-sm-12 col-12 flex-item">
           <table class="table table-secondary table-borderless">
             <tr>
               <td>Idade: </td>
@@ -81,6 +81,9 @@
             </tr>
           </table>
         </div>
+        <div class="col-6 ">
+          <img id="foto-animal" alt="Foto animal">
+        </div>
       </div>
       <div>
       </div>
@@ -91,8 +94,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/base.js"></script>
+    <script src="static/js/utils/api.js"></script>
     <script src="static/js/components/header.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/detalhes.js"></script>
   </body>
 </html>
