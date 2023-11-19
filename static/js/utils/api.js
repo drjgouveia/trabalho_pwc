@@ -110,6 +110,7 @@ async function fetchAnimalPorID(id) {
       await $.ajax({
         url: `https://api.petfinder.com/v2/animals/${id}`,
         type: "GET",
+        crossDomain: true,
         headers: {
           Authorization: "Bearer " + token,
         },
