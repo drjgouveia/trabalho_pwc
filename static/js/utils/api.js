@@ -100,6 +100,40 @@ async function fetchAnimaisPorID(ids) {
 }
 
 /**
+ * Função responsável por ir buscar o animal à API por ID
+ * @param {any[]} ids
+ * @returns {Promise} - Promise
+ */
+async function fetchAnimalPorID(id) {
+  return new Promise((resolve, reject) => {
+    obterToken(true).then(async (token) => {
+      await $.ajax({
+        url: `https://api.petfinder.com/v2/animals/${id}`,
+        type: "GET",
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+        success: function (data) {
+          if (data !== null) {
+            resolve(data.animal);
+          }
+        },
+        error: function (error) {
+          if (error.status === 401) {
+            obterToken(true).then(() => {
+              fetchAnimalPorID(id).then((animal) => {
+                resolve(animal);
+              });
+            });
+          }
+        },
+      });
+      resolve();
+    });
+  });
+}
+
+/**
  * Função responsável por ir buscar os animais à API
  * @returns {Promise}
  */
