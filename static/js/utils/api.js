@@ -31,6 +31,7 @@ function obterToken(force = false) {
           resolve(localStorage.getItem("token"));
         },
         error: function (error) {
+          localStorage.removeItem("token");
           reject(error);
         },
       });
@@ -62,7 +63,17 @@ async function fetchAnimaisPorID(ids) {
                 animais_para_inserir.push(data.animal);
               }
             },
-
+            error: function () {
+              obterToken(true)
+                .then(() => {
+                  fetchAnimaisPorID(ids).then(() => {
+                    resolve();
+                  });
+                })
+                .catch((e) => {
+                  reject(e);
+                });
+            },
             statusCode: {
               401: function () {
                 obterToken(true).then(() => {
@@ -128,8 +139,16 @@ async function fetchAnimalPorID(id) {
             });
           },
         },
-        error: function (error) {
-          reject(error);
+        error: function () {
+          obterToken(true)
+            .then(() => {
+              fetchAnimalPorID(id).then((animal) => {
+                resolve(animal);
+              });
+            })
+            .catch((e) => {
+              reject(e);
+            });
         },
       });
       resolve();
@@ -171,6 +190,15 @@ function fetchAnimais() {
               <p class="text-center">Não foi possível procurar nenhum animal</p>
             </div>
           `;
+          obterToken(true)
+            .then(() => {
+              fetchAnimais().then(() => {
+                resolve();
+              });
+            })
+            .catch((e) => {
+              reject(e);
+            });
         },
         success: function (data) {
           next_link = data.pagination._links.next.href;
