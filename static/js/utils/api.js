@@ -119,14 +119,17 @@ async function fetchAnimalPorID(id) {
             resolve(data.animal);
           }
         },
-        error: function (error) {
-          if (error.status === 401) {
+        statusCode: {
+          401: function () {
             obterToken(true).then(() => {
               fetchAnimalPorID(id).then((animal) => {
                 resolve(animal);
               });
             });
-          }
+          },
+        },
+        error: function (error) {
+          reject(error);
         },
       });
       resolve();
