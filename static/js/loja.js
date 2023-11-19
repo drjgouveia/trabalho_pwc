@@ -64,8 +64,8 @@ const data = [
 ];
 
 /**
- * Função responsável por adicionar/criar o card do produto 
- * @param {{}} product 
+ * Função responsável por adicionar/criar o card do produto
+ * @param {{}} product
  * @returns {HTMLDivElement} - devolve a div com o card do produto
  */
 function insertProduct(product) {
