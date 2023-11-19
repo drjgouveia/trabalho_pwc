@@ -28,61 +28,68 @@
     <div id="header"></div>
 
     <div class="container">
-      <div class="row" id="elemento">
-        <div class="col-12">
-          <h1 class="mt-5">
-            <span id="nome"></span> <i class="fa" id="sexo"></i>
-          </h1>
-          <hr />
+      <div class="row p-3" id="spinner">
+        <div class="col-12 text-center">
+          <div class="spinner-border text-success"></div>
         </div>
       </div>
-      <div class="row d-flex">
-        <div class="col-lg-6 col-sm-12 col-12 flex-item">
-          <table class="table table-secondary table-borderless">
-            <tr>
-              <td>Idade: </td>
-              <td id="idade"></td>
-            </tr>
-            <tr>
-              <td>Raça:</td>
-              <td id="raca"></td>
-            </tr>
-            <tr>
-              <td>Cor:</td>
-              <td id="cor"></td>
-            </tr>
-            <tr>
-              <td>Pelo:</td>
-              <td id="pelo"></td>
-            </tr>
-            <tr>
-              <td>Descrição:</td>
-              <td id="descricao"></td>
-            </tr>
-            <tr>
-              <td>Castrado:</td>
-              <td id="castrado"></td>
-            </tr>
-            <tr>
-              <td>Domesticado:</td>
-              <td id="domesticado"></td>
-            </tr>
-            <tr>
-              <td>Sem unhas:</td>
-              <td id="sem-unhas"></td>
-            </tr>
-            <tr>
-              <td>Necessidades especiais:</td>
-              <td id="necessidades-especiais"></td>
-            </tr>
-            <tr>
-              <td>Vacinas em dia:</td>
-              <td id="vacinas"></td>
-            </tr>
-          </table>
+      <div id="detalhes" class="d-none">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="mt-5">
+              <span id="nome"></span> <i class="fa" id="sexo"></i>
+            </h1>
+            <hr />
+          </div>
         </div>
-        <div class="col-6 ">
-          <img id="foto-animal" alt="Foto animal">
+        <div class="row d-flex">
+          <div class="col-lg-6 col-sm-12 col-12 flex-item">
+            <table class="table table-secondary table-borderless">
+              <tr>
+                <td>Idade: </td>
+                <td id="idade"></td>
+              </tr>
+              <tr>
+                <td>Raça:</td>
+                <td id="raca"></td>
+              </tr>
+              <tr>
+                <td>Cor:</td>
+                <td id="cor"></td>
+              </tr>
+              <tr>
+                <td>Pelo:</td>
+                <td id="pelo"></td>
+              </tr>
+              <tr>
+                <td>Descrição:</td>
+                <td id="descricao"></td>
+              </tr>
+              <tr>
+                <td>Castrado:</td>
+                <td id="castrado"></td>
+              </tr>
+              <tr>
+                <td>Domesticado:</td>
+                <td id="domesticado"></td>
+              </tr>
+              <tr>
+                <td>Sem unhas:</td>
+                <td id="sem-unhas"></td>
+              </tr>
+              <tr>
+                <td>Necessidades especiais:</td>
+                <td id="necessidades-especiais"></td>
+              </tr>
+              <tr>
+                <td>Vacinas em dia:</td>
+                <td id="vacinas"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-12 flex-item">
+            <img id="foto-animal" class="w-100" alt="Foto animal" src="https://placehold.co/600x375?text=Sem%20imagem">
+          </div>
         </div>
       </div>
       <div>

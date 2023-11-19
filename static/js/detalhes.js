@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $("#spinner").removeClass("d-none");
+    $("#detalhes").addClass("d-none");
     var animal_id = new URLSearchParams(window.location.search).get("id");
     fetchAnimalPorID(animal_id).then((animal) => {
         if(animal.gender === "Female") {
@@ -43,6 +45,8 @@ $(document).ready(function () {
             $("#vacinas").text("Não");
         }
 
-        $("#foto-animal").attr("src", animal.photos.full);
+        $("#foto-animal").attr("src", animal.photos[0].full);
+        $("#detalhes").removeClass("d-none");
+        $("#spinner").addClass("d-none");
     });
 })
