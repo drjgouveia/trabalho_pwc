@@ -2,3 +2,10 @@
         background-color: #fff7f7;
         border-radius: 20px;
 }
+
+#foto-animal{
+        max-height: 473px;
+        max-width: 600px;
+        height: auto;
+        width: 100%;
+}
