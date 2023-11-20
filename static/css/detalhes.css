@@ -1,11 +1,23 @@
-#container{
-        background-color: #fff7f7;
-        border-radius: 20px;
+#container {
+  background-color: #fff7f7;
+  border-radius: 20px;
 }
 
-#foto-animal{
-        max-height: 473px;
-        max-width: 600px;
-        height: auto;
-        width: 100%;
+#foto-animal {
+  max-height: 473px;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  #foto-animal {
+    max-height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #foto-animal {
+    max-height: 495px;
+  }
 }
