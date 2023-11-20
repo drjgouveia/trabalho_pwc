@@ -184,12 +184,6 @@ function fetchAnimais() {
           },
         },
         error: function (error) {
-          let lista = document.getElementById("lista");
-          lista.innerHTML = `
-            <div class="col-12">
-              <p class="text-center">Não foi possível procurar nenhum animal</p>
-            </div>
-          `;
           obterToken(true)
             .then(() => {
               fetchAnimais().then(() => {
@@ -197,6 +191,12 @@ function fetchAnimais() {
               });
             })
             .catch((e) => {
+              let lista = document.getElementById("lista");
+              lista.innerHTML = `
+                <div class="col-12">
+                  <p class="text-center">Não foi possível procurar nenhum animal</p>
+                </div>
+              `;
               reject(e);
             });
         },

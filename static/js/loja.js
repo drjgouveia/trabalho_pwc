@@ -188,7 +188,19 @@ function inserirProdutos() {
   document.getElementById("lista-loading").classList.add("d-none");
 }
 
+function onClickBtnComprar(event) {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho") ?? "[]");
+  if (carrinho.length < 1) {
+    alert("Não tem produtos no carrinho!");
+    return;
+  }
+  localStorage.removeItem("carrinho");
+  alert("Compra efetuada com sucesso!");
+  window.location.reload();
+}
+
 window.addEventListener("load", function () {
   inserirProdutos();
   addListenerEventsLoja();
+  $("#btn-comprar").on("click", onClickBtnComprar);
 });
