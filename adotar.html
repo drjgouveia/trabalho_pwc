@@ -79,33 +79,33 @@
           <div class="m-5 p-5 mt-6" id="formulario">
             <div class="mb-3">
               <label for="nome" class="form-label fw-bold required">Nome Completo</label>
-              <input type="text" class="form-control" id="nome_completo" />
+              <input type="text" class="form-control" id="nome_completo" required />
             </div>
             <div class="mb-3">
               <label for="contacto_telefonico" class="form-label fw-bold required">
                 Contacto Telefónico
               </label>
-              <input type="text" class="form-control" id="contacto_telefonico" />
+              <input type="text" class="form-control" id="contacto_telefonico" required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label fw-bold required">E-mail</label>
-              <input type="email" class="form-control" id="email" />
+              <input type="email" class="form-control" id="email" required />
             </div>
             <div class="mb-3">
               <label for="idade" class="form-label fw-bold required">Idade</label>
-              <input type="number" class="form-control" id="idade" />
+              <input type="number" class="form-control" id="idade" required />
             </div>
             <div class="mb-3">
               <label for="morada" class="form-label fw-bold required">Morada</label>
-              <textarea class="form-control" id="morada" rows="3"></textarea>
+              <textarea class="form-control" id="morada" rows="3" required ></textarea>
             </div>
             <div class="mb-3">
               <label for="cidade" class="form-label fw-bold required">Cidade</label>
-              <input type="text" class="form-control" id="cidade" />
+              <input type="text" class="form-control" id="cidade" required />
             </div>
             <div class="mb-3">
               <label for="profissao" class="form-label fw-bold required">Profissão</label>
-              <input type="text" class="form-control" id="profissao" />
+              <input type="text" class="form-control" id="profissao" required />
             </div>
             <div class="mb-3">
               <label for="nome animal" class="form-label fw-bold">
@@ -118,12 +118,13 @@
               animal.
             </p>
             <div class="form-check mb-3">
-              <input
+              <input 
                 class="form-check-input"
                 type="radio"
                 name="genero"
                 value="macho_genero"
                 id="macho_genero"
+                required
               />
               <label class="form-check-label" for="macho_genero">Macho</label>
             </div>
@@ -157,6 +158,7 @@
                 name="objetivo"
                 value="companhiagato"
                 id="companhiagato"
+                required
               />
               <label class="form-check-label" for="companhiagato">
                 Companhia para outro gato
@@ -192,6 +194,7 @@
                 name="habitacao"
                 value="apartamento"
                 id="apartamento"
+                required
               />
               <label class="form-check-label" for="apartamento">
                 Apartamento
@@ -242,6 +245,7 @@
                 name="tipo_habitacao"
                 value="propria"
                 id="propria"
+                required
               />
               <label class="form-check-label" for="propria">Própria</label>
             </div>
@@ -261,7 +265,7 @@
               <label for="adultos" class="form-label fw-bold required">
                 Quantos adultos vivem na casa?
               </label>
-              <input type="number" class="form-control" id="adultos" />
+              <input type="number" class="form-control" id="adultos" required />
             </div>
             <p class="required">
               Vivem crianças na casa? Se sim, indique o intervalo de idades.
@@ -273,6 +277,7 @@
                 name="criancas"
                 value="nao_existem_criancas"
                 id="nao_existem_criancas"
+                required
               />
               <label class="form-check-label" for="nao_existem_criancas">
                 Não existem crianças
@@ -324,6 +329,7 @@
                 name="visitas"
                 value="sim_visitas"
                 id="sim_visitas"
+                required
               />
               <label class="form-check-label" for="sim_visitas">Sim</label>
             </div>
@@ -341,14 +347,14 @@
               <label for="horas_sozinho" class="form-label fw-bold required">
                 Quantas horas por dia, em média, passará o animal, sozinho em casa?
               </label>
-              <input type="text" class="form-control" id="horas_sozinho" />
+              <input type="text" class="form-control" id="horas_sozinho" required />
             </div>
             <div class="mb-3">
               <label for="outros_animais" class="form-label fw-bold required">
                 Tem outros animais em casa e/ou a seu cargo? Se sim, especifique por favor o tipo e
                 a idade.
               </label>
-              <input type="text" class="form-control" id="outros_animais" />
+              <input type="text" class="form-control" id="outros_animais" required />
             </div>
             <p>
               Que tipo de personalidade espera encontrar no animal? Preencha por favor as próximas
@@ -362,6 +368,7 @@
                 name="gostar_animais"
                 value="gostar_animais_muito_importante"
                 id="gostar_animais_muito_importante"
+                required
               />
               <label class="form-check-label" for="gostar_animais_muito_importante">
                 Muito importante
@@ -399,6 +406,7 @@
                 name="sociavel"
                 value="sociavel_muito_importante"
                 id="sociavel_muito_importante"
+                required
               />
               <label class="form-check-label" for="sociavel_muito_importante">
                 Muito importante
@@ -436,6 +444,7 @@
                 name="estranhos"
                 value="estranhos_muito_importante"
                 id="estranhos_muito_importante"
+                required
               />
               <label class="form-check-label" for="estranhos_muito_importante">
                 Muito importante
@@ -473,6 +482,7 @@
                 name="esterilizado_castrado"
                 value="esterilizado_castrado_muito_importante"
                 id="esterilizado_castrado_muito_importante"
+                required
               />
               <label class="form-check-label" for="esterilizado_castrado_muito_importante">
                 Muito importante
@@ -510,6 +520,7 @@
                 name="pegar_colo"
                 value="pegar_colo_muito_importante"
                 id="pegar_colo_muito_importante"
+                required
               />
               <label class="form-check-label" for="pegar_colo_muito_importante">
                 Muito importante
@@ -547,6 +558,7 @@
                 name="calmo"
                 value="calmo_muito_importante"
                 id="calmo_muito_importante"
+                required
               />
               <label class="form-check-label" for="calmo_muito_importante">
                 Muito importante
@@ -584,6 +596,7 @@
                 name="comportamento_sozinho"
                 value="comportamento_sozinho_muito_importante"
                 id="comportamento_sozinho_muito_importante"
+                required
               />
               <label class="form-check-label" for="comportamento_sozinho_muito_importante">
                 Muito importante
@@ -621,6 +634,7 @@
                 name="atividade_animal"
                 value="calmo"
                 id="calmo"
+                required
               />
               <label class="form-check-label" for="calmo">Calmo</label>
             </div>
@@ -666,6 +680,7 @@
                 name="primeiro_animal"
                 value="sim_primeiro_animal"
                 id="sim_primeiro_animal"
+                required
               />
               <label class="form-check-label" for="sim_primeiro_animal">
                 Sim
@@ -699,6 +714,7 @@
                 name="ausencia"
                 value="ausencia_familiar_conhecido"
                 id="ausencia_familiar_conhecido"
+                required
               />
               <label class="form-check-label" for="ausencia_familiar_conhecido">
                 Ficará aos cuidados de um familiar/conhecido;
@@ -736,6 +752,7 @@
                 name="preso"
                 value="sim_preso"
                 id="sim_preso"
+                required
               />
               <label class="form-check-label" for="sim_preso">Sim</label>
             </div>
@@ -765,6 +782,7 @@
                 name="acidente"
                 value="sim_acidente"
                 id="sim_acidente"
+                required
               />
               <label class="form-check-label" for="sim_acidente">Sim</label>
             </div>
@@ -782,7 +800,7 @@
               <label for="custo" class="form-label fw-bold required">
                 Se a conta for elevada, o que fará?
               </label>
-              <input type="text" class="form-control" id="custo" />
+              <input type="text" class="form-control" id="custo" required />
             </div>
             <p class="required">
               Que tipo de alimentação pretende dar ao animal?
@@ -794,6 +812,7 @@
                 name="alimentacao"
                 value="racao_seca"
                 id="racao_seca"
+                required
               />
               <label class="form-check-label" for="racao_seca">
                 Ração seca
@@ -845,6 +864,7 @@
                 name="planos"
                 value="ter_filhos"
                 id="ter_filhos"
+                required
               />
               <label class="form-check-label" for="ter_filhos">
                 Ter filhos
@@ -887,19 +907,19 @@
                 Algum dos elementos do seu agregado familiar, ou amigos/parentes próximos, tem
                 alergia a cães ou gatos?
               </label>
-              <input type="text" class="form-control" id="agregado" />
+              <input type="text" class="form-control" id="agregado" required />
             </div>
             <div class="mb-3">
-              <label for="teste" class="form-label fw-bold required">
+              <label for="teste" class="form-label fw-bold required" >
                 Em caso de gravidez, fará o teste da toxoplasmose?
               </label>
-              <input type="text" class="form-control" id="teste" />
+              <input type="text" class="form-control" id="teste" required />
             </div>
             <div class="mb-3">
               <label for="teste_positivo" class="form-label fw-bold required">
                 Se for positivo, o que fará?
               </label>
-              <input type="text" class="form-control" id="teste_positivo" />
+              <input type="text" class="form-control" id="teste_positivo" required />
             </div>
             <p class="required">
               Gostaria de continuar a ter o nosso apoio/conselhos, depois de adoptar o animal?
@@ -911,6 +931,7 @@
                 name="acidente"
                 value="sim_apoio_conselhos"
                 id="sim_apoio_conselhos"
+                required
               />
               <label class="form-check-label" for="sim_apoio_conselhos">
                 Sim
@@ -949,6 +970,7 @@
                 name="privacidade"
                 value="ler_concordar_privacidade"
                 id="ler_concordar_privacidade"
+                required
               />
               <label class="form-check-label" for="ler_concordar_privacidade">
                 Li e concordo com a Política de Privacidade.
