@@ -44,8 +44,10 @@ $(document).ready(function () {
         } else {
             $("#vacinas").text("Não");
         }
-
-        $("#foto-animal").attr("src", animal.photos[0].full);
+        
+        if (animal.photos.length > 0) {
+            $("#foto-animal").attr("src", animal.photos[0].full);
+        }
         $("#detalhes").removeClass("d-none");
         $("#spinner").addClass("d-none");
     });
