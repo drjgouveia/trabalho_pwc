@@ -1,3 +1,4 @@
+// Exemplo de dados da loja
 const data = [
   {
     id: 1,
@@ -62,6 +63,11 @@ const data = [
   },
 ];
 
+/**
+ * Função responsável por adicionar/criar o card do produto
+ * @param {{}} product
+ * @returns {HTMLDivElement} - devolve a div com o card do produto
+ */
 function insertProduct(product) {
   let obj =
     JSON.parse(localStorage.getItem("carrinho") ?? "[]").filter((obj) => {
@@ -107,7 +113,9 @@ function insertProduct(product) {
                     </button>
                 </div>
                 <div class="col-2">
-                    <button class="btn w-100 btn-light btn-remover" disabled>
+                    <button class="btn w-100 btn-light btn-remover" ${
+                      obj.quantidade > 1 ? "" : "disabled"
+                    }>
                         <i class="fa-solid fa-minus"></i>
                     </button>
                 </div>
@@ -148,6 +156,10 @@ function insertProduct(product) {
   return colDiv;
 }
 
+/**
+ * Função responsável por adicionar os produtos à página
+ * @returns Não devolve nada
+ */
 function inserirProdutos() {
   document.getElementById("lista-loading").classList.remove("d-none");
   let lista = document.getElementById("lista");
@@ -176,7 +188,19 @@ function inserirProdutos() {
   document.getElementById("lista-loading").classList.add("d-none");
 }
 
+function onClickBtnComprar(event) {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho") ?? "[]");
+  if (carrinho.length < 1) {
+    alert("Não tem produtos no carrinho!");
+    return;
+  }
+  localStorage.removeItem("carrinho");
+  alert("Compra efetuada com sucesso!");
+  window.location.reload();
+}
+
 window.addEventListener("load", function () {
   inserirProdutos();
   addListenerEventsLoja();
+  $("#btn-comprar").on("click", onClickBtnComprar);
 });

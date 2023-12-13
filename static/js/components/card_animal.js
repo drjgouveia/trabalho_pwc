@@ -4,10 +4,10 @@
  * @return {null} Não retorna nada
  */
 function onClickAdicionarFavorito(e) {
-  e.target.innerHTML = "Favorito";
-  e.target.classList.add("btn-favorito");
-  e.target.classList.remove("btn-adicionar-favorito");
-  e.target.classList.remove("btn-remover-favorito");
+  $(e.target).text("Favorito");
+  $(e.target).addClass("btn-favorito");
+  $(e.target).removeClass("btn-adicionar-favorito");
+  $(e.target).removeClass("btn-remover-favorito");
 
   if (e.target.dataset.id !== null) {
     localStorage.setItem(
@@ -20,10 +20,10 @@ function onClickAdicionarFavorito(e) {
     );
   }
 
-  e.target.removeEventListener("click", onClickAdicionarFavorito, false);
-  e.target.addEventListener("click", onClickFavorito, false);
-  e.target.addEventListener("mouseout", onMouseOutFavorito, false);
-  e.target.addEventListener("mouseover", onMouseoverFavorito, false);
+  $(e.target).off();
+  $(e.target).on("click", onClickFavorito);
+  $(e.target).on("mouseout", onMouseOutFavorito);
+  $(e.target).on("mouseover", onMouseoverFavorito);
 }
 
 /**
@@ -33,9 +33,9 @@ function onClickAdicionarFavorito(e) {
  * @return {null} Não retorna nada
  */
 function onMouseoverFavorito(e) {
-  e.target.innerHTML = "Remover dos favoritos";
-  e.target.classList.add("btn-remover-favorito");
-  e.target.classList.remove("btn-favorito");
+  $(e.target).text("Remover dos favoritos");
+  $(e.target).addClass("btn-remover-favorito");
+  $(e.target).removeClass("btn-favorito");
 }
 
 /**
@@ -45,10 +45,9 @@ function onMouseoverFavorito(e) {
  * @return {null} Não retorna nada
  */
 function onMouseOutFavorito(e) {
-  e.target.innerHTML = "Favorito";
-  e.target.classList.remove("btn-remover-favorito");
-  e.target.classList.add("btn-favorito");
-  e.target.addEventListener("mouseover", onMouseoverFavorito, false);
+  $(e.target).text("Favorito");
+  $(e.target).removeClass("btn-remover-favorito");
+  $(e.target).addClass("btn-favorito");
 }
 
 /**
@@ -58,10 +57,10 @@ function onMouseOutFavorito(e) {
  * @return {null} Não retorna nada
  */
 function onClickFavorito(e) {
-  e.target.innerHTML = "Adicionar aos favoritos";
-  e.target.classList.add("btn-adicionar-favorito");
-  e.target.classList.remove("btn-favorito");
-  e.target.classList.remove("btn-remover-favorito");
+  $(e.target).text("Adicionar aos favoritos");
+  $(e.target).addClass("btn-adicionar-favorito");
+  $(e.target).removeClass("btn-favorito");
+  $(e.target).removeClass("btn-remover-favorito");
 
   localStorage.setItem(
     "favoritos",
@@ -72,10 +71,8 @@ function onClickFavorito(e) {
     )
   );
 
-  e.target.removeEventListener("click", onClickFavorito, false);
-  e.target.addEventListener("click", onClickAdicionarFavorito, false);
-  e.target.removeEventListener("mouseover", onMouseoverFavorito, false);
-  e.target.removeEventListener("mouseout", onMouseOutFavorito, false);
+  $(e.target).off();
+  $(e.target).on("click", onClickAdicionarFavorito);
 }
 
 /**
@@ -92,75 +89,22 @@ function onClickListaFavoritos(e) {
  * @return Não retorna nada.
  */
 function addListenerCards() {
-  var button_adicionar_favorito_elementos = document.getElementsByClassName(
-    "btn-adicionar-favorito"
-  );
-  for (var i = 0; i < button_adicionar_favorito_elementos.length; i++) {
-    button_adicionar_favorito_elementos[i].addEventListener(
-      "click",
-      onClickAdicionarFavorito,
-      false
-    );
-  }
+  $(".btn-adicionar-favorito").off();
+  $(".btn-adicionar-favorito").on("click", onClickAdicionarFavorito);
 
-  var button_favorito_elementos = document.getElementsByClassName(
-    "btn-favorito"
-  );
-  for (var i = 0; i < button_favorito_elementos.length; i++) {
-    button_favorito_elementos[i].addEventListener(
-      "click",
-      onClickFavorito,
-      false
-    );
+  $(".btn-favorito").off();
+  $(".btn-favorito")
+    .on("click", onClickFavorito)
+    .on("mouseout", onMouseOutFavorito)
+    .on("mouseover", onMouseoverFavorito);
 
-    button_favorito_elementos[i].addEventListener(
-      "click",
-      onClickFavorito,
-      false
-    );
-    button_favorito_elementos[i].addEventListener(
-      "mouseout",
-      onMouseOutFavorito,
-      false
-    );
+  $(".btn-lista-favorito").off();
+  $(".btn-lista-favoritos").on("click", onClickListaFavoritos);
 
-    button_favorito_elementos[i].addEventListener(
-      "mouseover",
-      onMouseoverFavorito,
-      false
-    );
-  }
-
-  var button_lista_favoritos = document.getElementsByClassName(
-    "btn-lista-favoritos"
-  );
-  for (var i = 0; i < button_lista_favoritos.length; i++) {
-    button_favorito_elementos[i].addEventListener(
-      "click",
-      onClickFavorito,
-      false
-    );
-
-    button_favorito_elementos[i].addEventListener(
-      "click",
-      onClickListaFavoritos,
-      false
-    );
-  }
-
-  var card_animal_elements = document.getElementsByClassName(
-    "card-animal-link"
-  );
-
-  for (var i = 0; i < card_animal_elements.length; i++) {
-    card_animal_elements[i].addEventListener(
-      "click",
-      function (e) {
-        window.location.href = e.currentTarget.dataset.href;
-      },
-      false
-    );
-  }
+  $(".card-animal-link").off();
+  $(".card-animal-link").on("click", function (e) {
+    window.location.href = e.currentTarget.dataset.href;
+  });
 }
 
 window.addEventListener("load", function () {

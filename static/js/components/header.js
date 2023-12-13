@@ -1,5 +1,10 @@
+/**
+ * Função para definir a classe active no link do header e ser correspondente com a página atual
+ * @summary Função para definir a classe active no link do header
+ */
 function definirActiveClassHeader() {
-  const path = window.location.pathname.slice(1);
+  let path = window.location.pathname.slice(1);
+  path = path.split("/")[path.split("/").length - 1];
   const links = document.querySelectorAll(".nav-link");
   links.forEach((link) => {
     if (link.getAttribute("href") === path) {

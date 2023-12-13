@@ -27,13 +27,13 @@ function inserirAnimal(animal) {
   cardDiv.dataset.id = animal.id;
 
   cardDiv.innerHTML = `
-    <img data-href="/detalhes.html?id=${animal.id}" src="${
+    <img data-href="detalhes.html?id=${animal.id}" src="${
     animal.primary_photo_cropped
       ? animal.primary_photo_cropped.full
       : "https://placehold.co/600x400?text=Sem%20imagem"
   }" class="card-img-top card-animal-link" alt="Imagem de um cão" />
     <div class="card-body">
-        <div class="card-animal-link" data-href="/detalhes.html?id=${
+        <div class="card-animal-link" data-href="detalhes.html?id=${
           animal.id
         }">
         <h5 class="card-title">
