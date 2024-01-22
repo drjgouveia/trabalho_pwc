@@ -11,7 +11,7 @@ var total = 0;
  */
 function obterToken(force = false) {
   return new Promise(async (resolve, reject) => {
-    let token = localStorage.getItem("token");
+    let token = localStorage.getItem("token") ?? null;
     if (token === null || force) {
       await $.ajax({
         url: "https://api.petfinder.com/v2/oauth2/token",
